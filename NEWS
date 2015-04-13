@@ -1,0 +1,31 @@
+ggsunburst 0.0.2
+================
+
+new functionality:
+  tile function to include a geom_tile (similar to a heatmap) layer
+
+changes:
+  sunburst and icicle do not accept the following arguments anymore: labels, text.size, text.color.
+  sunburst and icicle now accept these arguments: leaf_labels, leaf_labels.size, leaf_labels.color, node_labels, node_labels.size, node_labels.color and	node_labels.min.
+  sunbust_data$node_labels now have additional variables: rhjust, pvjust and delta_angle.
+  bug fixes
+  
+
+ggsunburst 0.0.1
+================
+
+new functionality:
+  sunburst_data accepts node_atributes parameter to include node attributes in its output
+
+changes:
+  bug fixes
+
+
+ggsunburst 0.0
+============
+
+Experimental release of package.
+
+Supports extraction of plot data for the following format:
+
+* newick format (input as string or file)
