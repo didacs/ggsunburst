@@ -2,5 +2,5 @@
 #'
 #' @name ggsunburst
 #' @docType package
-#' @import ggplot2 rPython reshape2
+#' @import ggplot2 reticulate reshape2
 NULL
