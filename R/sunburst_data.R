@@ -13,14 +13,15 @@
 #' @seealso \code{\link{sunburst}}
 #' @seealso \code{\link{icicle}}
 
-sunburst_load_data <- function(input, type="newick", sep=NULL, ladderize = F,
+sunburst_data <- function(input, type="newick", sep=NULL, ladderize = F,
                           ultrametric = F, xlim=360, rot=0, node_attributes=''){
   py_run_string("def appendpath(a): import sys; sys.path.append(a)")
   py$appendpath(system.file(package="ggsunburst"))
+  py_run_string("import sys")
   path <- system.file("ggsunburst.py", package="ggsunburst")
-  source_python(path)
+  reticulate::source_python(path)
 
-  out <- sunburst_data(input, type, sep,
+  out <- py_sunburst_data(input, type, sep,
                        ladderize, ultrametric, xlim, rot, node_attributes)
   tree_data <- list()
   tree_data[['rects']]       <- read.delim(text=out[1], header=T)

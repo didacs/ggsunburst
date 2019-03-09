@@ -309,7 +309,7 @@ setattr(Tree, "hjust_rtext", hjust_rtext)
 setattr(Tree, "vjust_rtext", vjust_rtext)
 
 # Functions to be loaded into R
-def sunburst_data(input, type="newick", sep="\t", ladderize=False, ultrametric=False,
+def py_sunburst_data(input, type="newick", sep="\t", ladderize=False, ultrametric=False,
                   xlim=360, rot=0, node_attributes=''):
 
     if node_attributes and not isinstance(node_attributes, list):

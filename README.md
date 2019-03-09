@@ -22,7 +22,7 @@ http://genome.crg.es/~didac/ggsunburst/
 ## Example
     
     if (!require(ggplot2)) install.packages("ggplot2")
-    if (!require(rPython)) install.packages("rPython")
+    if (!require(reticulate)) install.packages("reticulate")
     library(ggsunburst)
     
     # newick format
