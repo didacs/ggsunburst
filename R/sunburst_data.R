@@ -17,18 +17,11 @@ sunburst_load_data <- function(input, type="newick", sep=NULL, ladderize = F,
                           ultrametric = F, xlim=360, rot=0, node_attributes=''){
   py_run_string("def appendpath(a): import sys; sys.path.append(a)")
   py$appendpath(system.file(package="ggsunburst"))
-
-  # python.exec( "def appendpath(a): import sys; sys.path.append(a)" )
-  # python.call( "appendpath",  system.file(package="ggsunburst") )
-
   path <- system.file("ggsunburst.py", package="ggsunburst")
   source_python(path)
-  # python.load(path)
 
   out <- sunburst_data(input, type, sep,
                        ladderize, ultrametric, xlim, rot, node_attributes)
-  # out <- python.call('sunburst_data', input, type, sep,
-                     # ladderize, ultrametric, xlim, rot, node_attributes)
   tree_data <- list()
   tree_data[['rects']]       <- read.delim(text=out[1], header=T)
   tree_data[['leaf_labels']] <- read.delim(text=out[2], header=T)
@@ -55,10 +48,10 @@ sunburst_load_data <- function(input, type="newick", sep=NULL, ladderize = F,
 #' @return NULL
 
 nw_print <- function(newick, format = 8, ladderize = F, ultrametric = F){
-  python.exec( "def appendpath(a): import sys; sys.path.append(a)" )
-  python.call( "appendpath",  system.file(package="ggsunburst") )
-  path <- paste(system.file(package="ggsunburst"), "ggsunburst.py", sep="/")
-  python.load(path)
+  py_run_string("def appendpath(a): import sys; sys.path.append(a)")
+  py$appendpath(system.file(package="ggsunburst"))
+  path <- system.file("ggsunburst.py", package="ggsunburst")
+  source_python(path)
   t <- python.call('nw_print', newick, format, ladderize, ultrametric)
   cat(as.character(t))
 }
