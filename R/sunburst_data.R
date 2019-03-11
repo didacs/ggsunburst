@@ -15,9 +15,8 @@
 
 sunburst_data <- function(input, type="newick", sep=NULL, ladderize = F,
                           ultrametric = F, xlim=360, rot=0, node_attributes=''){
-  py_run_string("def appendpath(a): import sys; sys.path.append(a)")
+  reticulate::py_run_string("def appendpath(a): import sys; sys.path.append(a)")
   py$appendpath(system.file(package="ggsunburst"))
-  py_run_string("import sys")
   path <- system.file("ggsunburst.py", package="ggsunburst")
   reticulate::source_python(path)
 
@@ -49,10 +48,10 @@ sunburst_data <- function(input, type="newick", sep=NULL, ladderize = F,
 #' @return NULL
 
 nw_print <- function(newick, format = 8, ladderize = F, ultrametric = F){
-  py_run_string("def appendpath(a): import sys; sys.path.append(a)")
+  reticulate::py_run_string("def appendpath(a): import sys; sys.path.append(a)")
   py$appendpath(system.file(package="ggsunburst"))
   path <- system.file("ggsunburst.py", package="ggsunburst")
-  source_python(path)
-  t <- python.call('nw_print', newick, format, ladderize, ultrametric)
+  reticulate::source_python(path)
+  t <- py_nw_print(newick, format, ladderize, ultrametric)
   cat(as.character(t))
 }

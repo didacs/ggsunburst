@@ -453,7 +453,7 @@ def tree_data(input, type="newick", sep="\t", ladderize=False, ultrametric=False
 
     return segments_str #, labels_str]
 
-def nw_print(newick, format=8, ladderize=False, ultrametric=False):
+def py_nw_print(newick, format=8, ladderize=False, ultrametric=False):
     t = Tree(newick, format = format )
     if ladderize:
         if not ladderize in ['L','LEFT','left','Left']:
