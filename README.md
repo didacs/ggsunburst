@@ -14,8 +14,7 @@ The results can be passed to `ggplot()`.
 
 This package uses some code from the python module `ETE`, a python Environment for phylogenetic Tree Exploration (http://ete.cgenomics.org/)
 
-ggsunburst depends on `ggplot2` and `rPython` packages. You will need to install them before using it.
-The requirements for installing `rPython` can be found at: http://cran.r-project.org/web/packages/rPython/index.html.
+ggsunburst depends on `ggplot2` and `reticulate` packages. You will need to install them before using it.
 
 http://genome.crg.es/~didac/ggsunburst/
 
