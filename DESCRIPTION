@@ -2,7 +2,7 @@ Package: ggsunburst
 Title: Adjacency diagrams with ggplot2
 Description: Tools for extracting data from a tree structure,
     and plot it as adjacency diagrams (sunburst and icicle).
-Version: 0.1.0
+Version: 0.3.0
 Author: Didac Santesmasses <didac.santesmasses@crg.eu>
 Maintainer: Didac Santesmasses <didac.santesmasses@crg.eu>
 Depends:

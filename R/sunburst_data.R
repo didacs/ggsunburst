@@ -17,7 +17,7 @@ sunburst_data <- function(input, type="newick", sep=NULL, ladderize = F,
                           ultrametric = F, xlim=360, rot=0, node_attributes=''){
   reticulate::py_run_string("def appendpath(a): import sys; sys.path.append(a)")
   py$appendpath(system.file(package="ggsunburst"))
-  path <- system.file("ggsunburst.py", package="ggsunburst")
+  path <- system.file("ggsunburst3.py", package="ggsunburst")
   reticulate::source_python(path)
 
   out <- py_sunburst_data(input, type, sep,
