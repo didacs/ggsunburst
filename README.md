@@ -12,11 +12,10 @@ Adjacency diagrams are space-filling variants of node-link diagrams; rather than
 
 The results can be passed to `ggplot()`.
 
-This package uses some code from the python module `ETE`, a python Environment for phylogenetic Tree Exploration (http://ete.cgenomics.org/)
+This package uses some code from the python module `ETE`, a python Environment for phylogenetic Tree Exploration (http://etetoolkit.org/)
 
 ggsunburst depends on `ggplot2` and `reticulate` packages. You will need to install them before using it.
 
-http://genome.crg.es/~didac/ggsunburst/
 
 ## Example
     
