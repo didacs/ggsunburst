@@ -21,6 +21,9 @@ ggsunburst depends on `ggplot2` and `reticulate` packages. You will need to inst
     
     if (!require(ggplot2)) install.packages("ggplot2")
     if (!require(reticulate)) install.packages("reticulate")
+    
+    library(devtools)
+    install_github("didacs/ggsunburst")
     library(ggsunburst)
     
     # newick format
