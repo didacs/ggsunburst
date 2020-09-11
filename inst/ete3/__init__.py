@@ -48,7 +48,7 @@ try:
 except ImportError as e:
     numpy = None
 
-# from .ncbi_taxonomy import *
+from .ncbi_taxonomy import *
 from .coretype.tree import *
 from .coretype.seqgroup import *
 from .phylo.phylotree import *
